@@ -6,13 +6,60 @@
 body {
     font-family: "fifteentwenty", Arial, Helvetica, sans-serif;
     background-color: black;
+    margin: 0;
 }
 
 h1 {
     color: magenta;
-    font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+    font-size: clamp(1rem, 5vw, 10rem);
+
 }
 
+.title {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    z-index: 2;
+
+    border: 5px;
+    border-color: lime;
+    border-style: none none solid none;
+
+    padding-left: 3%;
+    padding-top: 1vh;
+
+    margin-bottom: 1vh;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+    /* Top clearance + Horizontal auto-centering */
+    z-index: 1;
+}
+
+.card {
+    flex: 0 0 40vw;
+    max-width: 500px;
+    margin: 1.5rem 3vw;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    border: 5px;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: magenta;
+}
 
 /****************************/
 /*Animated text - typewriter*/
@@ -158,4 +205,26 @@ h1 {
 
 /*Mobile overrides*/
 
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        margin: 80px auto 0 auto;
+    }
+
+    .card {
+        flex: 1 1 auto;
+        width: 90%;
+        /* Spans 90% screen width on mobile */
+        max-width: none;
+        margin: 1rem 0;
+        /* Vertical spacing between stacked cards */
+        height: 220px;
+    }
+
+    .typewriter::after {
+        vertical-align: 3px;
+        /*Offsets cursor height to align with text*/
+    }
+
+}
