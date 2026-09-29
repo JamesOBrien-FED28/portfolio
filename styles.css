@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "fifteentwenty";
+    src: url("./fonts/FifteenTwenty-Bold.otf");
+}
+
+body {
+    font-family: "fifteentwenty", Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+h1 {
+    color: magenta;
+    font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+}
+
+
+/****************************/
+/*Animated text - typewriter*/
+/****************************/
+
+/*Defines initial empty 'content' string, animation length and loop*/
+.typewriter::before {
+    content: "";
+    /*Creates invisible element for the text string*/
+    animation-name: typing;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/*Creates the cursor effect*/
+.typewriter::after {
+    content: "";
+    /*Creates invisible element to hold the cursor*/
+    border-right-width: 1ch;
+    border-right-style: solid;
+    border-right-color: currentColor;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    vertical-align: 10px;
+    /*Offsets cursor height to align with text*/
+}
+
+/*Keyframe animation simulating typing by swapping out the content string*/
+@keyframes typing {
+    0% {
+        content: "";
+    }
+
+    3% {
+        content: "J";
+    }
+
+    6% {
+        content: "JA";
+    }
+
+    9% {
+        content: "JAM";
+    }
+
+    12% {
+        content: "JAME";
+    }
+
+    15% {
+        content: "JAMES ";
+    }
+
+    18% {
+        content: "JAMES ";
+    }
+
+    21% {
+        content: "JAMES O";
+    }
+
+    24% {
+        content: "JAMES O'";
+    }
+
+    27% {
+        content: "JAMES O'B";
+    }
+
+    30% {
+        content: "JAMES O'BR";
+    }
+
+    33% {
+        content: "JAMES O'BRI";
+    }
+
+    36% {
+        content: "JAMES O'BRIE";
+    }
+
+    39% {
+        content: "JAMES O'BRIEN";
+    }
+
+    42% {
+        content: "JAMES O'BRIEN ";
+    }
+
+    45% {
+        content: "JAMES O'BRIEN P";
+    }
+
+    48% {
+        content: "JAMES O'BRIEN PO";
+    }
+
+    51% {
+        content: "JAMES O'BRIEN POR";
+    }
+
+    53% {
+        content: "JAMES O'BRIEN PORT";
+    }
+
+    56% {
+        content: "JAMES O'BRIEN PORTF";
+    }
+
+    59% {
+        content: "JAMES O'BRIEN PORTFO";
+    }
+
+    62% {
+        content: "JAMES O'BRIEN PORTFOL";
+    }
+
+    65% {
+        content: "JAMES O'BRIEN PORTFOLI";
+    }
+
+    68%,
+    100% {
+        content: "JAMES O'BRIEN PORTFOLIO";
+    }
+}
+
+/*Keyframe animation for the blinking cursor, toggles opacity*/
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/*Mobile overrides*/
+
+@media (max-width: 800px) {}
