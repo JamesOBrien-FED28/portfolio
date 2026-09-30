@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "C64Pro";
+    src: url(".../fonts/C64_Pro-STYLE.woff2");
+}
+
+html,
+body {
+    font-family: "C64Pro";
+    font-size: xx-large;
+    color: #0088FF;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.controls {
+    margin: 10px;
+    padding: 1%;
+    background-color: #0000AA;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6D6CBC;
+}
