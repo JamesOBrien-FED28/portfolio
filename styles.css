@@ -6,32 +6,27 @@
 body {
     font-family: "fifteentwenty", Arial, Helvetica, sans-serif;
     background-color: black;
-    margin: 0;
+    margin: 0px;
 }
 
 h1 {
     color: magenta;
-    font-size: clamp(1rem, 5vw, 10rem);
-
+    line-height: 1;
+    font-size: clamp(2rem, 5vw, 10rem);
 }
 
 .title {
     position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
+    width: 97%;
+    height: 12vh;
     background-color: black;
     z-index: 2;
 
-    border: 5px;
+    border-width: 5px;
     border-color: lime;
-    border-style: none none solid none;
+    border-bottom-style: solid;
 
     padding-left: 3%;
-    padding-top: 1vh;
-
-    margin-bottom: 1vh;
 }
 
 .navigation {
@@ -41,24 +36,29 @@ h1 {
     flex-wrap: wrap;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto 0 auto;
-    /* Top clearance + Horizontal auto-centering */
+
+    margin-right: auto;
+    margin-left: auto;
+
     z-index: 1;
 }
 
 .card {
-    flex: 0 0 40vw;
-    max-width: 500px;
-    margin: 1.5rem 3vw;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(50% - 2rem);
+
     height: 300px;
+    margin: 1rem;
+
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
 
-    border: 5px;
+    border-width: 5px;
     border-style: solid;
-    border-radius: 25px;
     border-color: magenta;
+    border-radius: 25px;
 }
 
 /****************************/
@@ -68,7 +68,6 @@ h1 {
 /*Defines initial empty 'content' string, animation length and loop*/
 .typewriter::before {
     content: "";
-    /*Creates invisible element for the text string*/
     animation-name: typing;
     animation-duration: 4s;
     animation-iteration-count: 1;
@@ -78,16 +77,16 @@ h1 {
 /*Creates the cursor effect*/
 .typewriter::after {
     content: "";
-    /*Creates invisible element to hold the cursor*/
     border-right-width: 1ch;
     border-right-style: solid;
     border-right-color: currentColor;
+
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+
     vertical-align: 10px;
-    /*Offsets cursor height to align with text*/
 }
 
 /*Keyframe animation simulating typing by swapping out the content string*/
@@ -209,22 +208,30 @@ h1 {
     .navigation {
         flex-direction: column;
         align-items: center;
-        margin: 80px auto 0 auto;
+
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
     }
 
     .card {
-        flex: 1 1 auto;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+
         width: 90%;
-        /* Spans 90% screen width on mobile */
         max-width: none;
-        margin: 1rem 0;
-        /* Vertical spacing between stacked cards */
+
+        margin-top: 1rem;
+        margin-right: 0px;
+        margin-bottom: 1rem;
+        margin-left: 0px;
+
         height: 220px;
     }
 
     .typewriter::after {
         vertical-align: 3px;
-        /*Offsets cursor height to align with text*/
     }
-
 }
