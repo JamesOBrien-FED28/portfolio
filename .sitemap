@@ -1,17 +1,15 @@
 index.html
 |
 |-games.html
-|--polarityevolved.html
-|--shootyman.html
-|--dungeonsofdread.html
+|--polarityevolved.html (unity launcher window)
+|--shootyman.html (new window)
+|--dungeonsofdread.html (new window)
 |
 |-music.html
-|--wrongdad.html
-|--duplicatestate.html
+|--wrongdad.html (media player - new window)
+|--duplicatestate.html (media player - new window)
 |
-|-frontend.html
-|--poster.html
-|--cards.html
+|-github profile
 |
 |-aboutme.html
 

@@ -20,7 +20,9 @@ h1 {
 }
 
 h2,
-h3 {
+p,
+h3,
+li {
     color: lime;
     line-height: 1;
     text-align: center;
@@ -31,6 +33,13 @@ h2 {
 }
 
 h3 {
+    color: orange;
+    font-size: clamp(1rem, 2vw, 5rem);
+}
+
+p,
+li {
+    color: yellow;
     font-size: clamp(1rem, 1vw, 5rem);
 }
 
