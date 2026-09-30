@@ -19,6 +19,21 @@ h1 {
     font-size: clamp(2rem, 5vw, 10rem);
 }
 
+h2,
+h3 {
+    color: lime;
+    line-height: 1;
+    text-align: center;
+}
+
+h2 {
+    font-size: clamp(1rem, 3vw, 5rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 1vw, 5rem);
+}
+
 .title {
     position: sticky;
     width: 97%;
