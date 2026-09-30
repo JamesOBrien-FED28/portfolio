@@ -25,6 +25,7 @@ h1 {
     height: 12vh;
     background-color: black;
     z-index: 2;
+    text-align: center;
 
     border-width: 5px;
     border-color: lime;
