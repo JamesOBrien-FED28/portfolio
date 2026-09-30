@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrong Dad - Player</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="player-body">
+
+    <div class="player-container">
+        <h2 id="now-playing-title" class="now-playing">Select a track...</h2>
+
+        <!-- Main Audio Element -->
+        <audio id="main-audio" controls class="audio-element">
+            <source id="audio-source" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Playlist Buttons -->
+        <div class="playlist-list">
+            <button class="track-btn"
+                onclick="playTrack('./DuplicateState/ashotofpersistance.mp3', 'A Shot of Persistance', this)">
+                01. A Shot of Persistance
+            </button>
+            <button class="track-btn" onclick="playTrack('./DuplicateState/endlesssleep.mp3', 'Endless Sleep', this)">
+                02. Endless Sleep
+            </button>
+            <button class="track-btn"
+                onclick="playTrack('./DuplicateState/expectingsomethingmorethannothing.mp3', 'Expecting Something More Than Nothing', this)">
+                03. Expecting Something More Than Nothing
+            </button>
+            <button class="track-btn" onclick="playTrack('./DuplicateState/tangent.mp3', 'Tangent', this)">
+                04. Tangent
+            </button>
+        </div>
+    </div>
+
+    <script src="./player.js"></script>
+</body>
+
+</html>

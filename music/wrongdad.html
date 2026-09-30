@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrong Dad - Player</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="player-body">
+
+    <div class="player-container">
+        <h2 id="now-playing-title" class="now-playing">Select a track...</h2>
+
+        <!-- Main Audio Element -->
+        <audio id="main-audio" controls class="audio-element">
+            <source id="audio-source" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Playlist Buttons -->
+        <div class="playlist-list">
+            <button class="track-btn"
+                onclick="playTrack('./WrongDad/nanodesandcathodes.mp3', 'Nanodes and Cathodes', this)">
+                01. Nanodes and Cathodes
+            </button>
+            <button class="track-btn" onclick="playTrack('./WrongDad/pfc.mp3', 'PFC', this)">
+                02. PFC
+            </button>
+            <button class="track-btn" onclick="playTrack('./WrongDad/lightfingers.mp3', 'Light Fingers', this)">
+                03. Light Fingers
+            </button>
+            <button class="track-btn"
+                onclick="playTrack('./WrongDad/digitalmidgetvswrongdad.mp3', 'Digital Midget vs Wrong Dad', this)">
+                04. Digital Midget vs Wrong Dad
+            </button>
+            <button class="track-btn" onclick="playTrack('./WrongDad/dreamcamel.mp3', 'Dream Camel', this)">
+                05. Dream Camel
+            </button>
+            <button class="track-btn" onclick="playTrack('./WrongDad/facedancing.mp3', 'Face Dancing', this)">
+                06. Face Dancing
+            </button>
+            <button class="track-btn" onclick="playTrack('./WrongDad/flannels.mp3', 'Flannels', this)">
+                07. Flannels
+            </button>
+            <button class="track-btn" onclick="playTrack('./WrongDad/gjuggjuggjug.mp3', 'Gjug Gjug Gjug', this)">
+                08. Gjug Gjug Gjug
+            </button>
+            <button class="track-btn"
+                onclick="playTrack('./WrongDad/herdofcowsstampedingatsunset.mp3', 'Herd of Cows Stampeding at Sunset', this)">
+                09. Herd of Cows Stampeding at Sunset
+            </button>
+
+        </div>
+    </div>
+
+    <script src="./player.js"></script>
+</body>
+
+</html>
