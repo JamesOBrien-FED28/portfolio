@@ -5,7 +5,7 @@
 
 html,
 body {
-    font-family: "C64Pro";
+    font-family: "C64Pro", Arial, Helvetica, sans-serif;
     font-size: large;
     color: #0088FF;
     height: 100%;
@@ -14,7 +14,7 @@ body {
 }
 
 .controls {
-    font-family: "C64Pro";
+    font-family: "C64Pro", Arial, Helvetica, sans-serif;
     margin: 10px;
     padding: 1%;
     background-color: #0000AA;
