@@ -47,6 +47,27 @@ li {
     font-size: clamp(1rem, 1vw, 5rem);
 }
 
+/* Target the actual <a> tags inside .topnav */
+.topnav a {
+    color: magenta;
+    font-size: 1.5rem;
+    margin: 0 3rem;
+    transition: color 0.2s ease;
+}
+
+/* Hover & Focus state */
+.topnav a:hover,
+.topnav a:focus {
+    color: lime;
+}
+
+/* Keep container alignment and spacing */
+.topnav {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
 /**************************************************/
 /* 2. HEADER & NAVIGATION LAYOUT                  */
 /**************************************************/
@@ -482,5 +503,48 @@ li {
     .about-image {
         width: 80%;
         max-width: 250px;
+    }
+
+    /* Horizontal scroll for topnav on mobile */
+    .topnav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        /* Keeps items scrolling naturally from left to right */
+        overflow-x: auto;
+        /* Enables side scrolling */
+        overflow-y: hidden;
+        white-space: nowrap;
+        /* Prevents link text from breaking into multiple lines */
+
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        /* Smooth touch scrolling & snapping on mobile devices */
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+
+        /* Hides unsightly scrollbars across browsers */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE/Edge */
+    }
+
+    .topnav::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+
+    .topnav a {
+        flex-shrink: 0;
+        /* Prevents links from shrinking to fit screen width */
+        scroll-snap-align: center;
+        /* Snaps link cleanly into view as user scrolls */
+        margin: 0 0.75rem;
+        font-size: 1.25rem;
+        /* Sized down slightly for small screens */
     }
 }
